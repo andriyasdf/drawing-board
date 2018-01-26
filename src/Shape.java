@@ -1,4 +1,4 @@
-public class Shape implements Drawable {
+public abstract class Shape implements Drawable {
 
 
 
