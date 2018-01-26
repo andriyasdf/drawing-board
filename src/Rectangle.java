@@ -5,6 +5,9 @@ public class Rectangle extends Shape {
         super(new Point2D.Double(x, y), new Point2D.Double(x + width, y + height),
                 new Point2D.Double(x, y + height), new Point2D.Double(x + width, y));
     }
+    public Rectangle(Point2D point1, Point2D point2){
+        super(point1, point2);
+    }
 
     @Override
     public void draw(DrawingBoard db) {

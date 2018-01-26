@@ -16,6 +16,10 @@ public class Drawing {
         Line line = new Line(new Point2D.Double(20, 20), new Point2D.Double(400, 100));
         line.draw(drawingBoard);
 
+        Rectangle rectangle = new Rectangle(new Point2D.Double(20, 20), new Point2D.Double(400, 100));
+        rectangle.draw(drawingBoard);
+
+
         drawingBoard.show();
     }
 }
