@@ -1,2 +1,2 @@
-public class Group extends Drawing{
+public class Group extends Drawing {
 }
