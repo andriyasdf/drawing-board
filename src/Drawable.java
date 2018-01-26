@@ -1,11 +1,8 @@
 import javafx.scene.paint.Color;
 
-import java.awt.geom.Point2D;
-
 public interface Drawable {
-    Point2D position = new Point2D.Double();
-    Color color = Color.BLACK;
+    Color color = Color.WHITE;
 
-    void drawOn(DrawingBoard db);
+    void draw(DrawingBoard db);
     boolean within(DrawingBoard db);
 }
