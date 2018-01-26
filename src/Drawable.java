@@ -6,6 +6,6 @@ public interface Drawable {
     Point2D position = new Point2D.Double();
     Color color = Color.BLACK;
 
-    void draw();
-    boolean within();
+    void drawOn(DrawingBoard db);
+    boolean within(DrawingBoard db);
 }
