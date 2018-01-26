@@ -7,4 +7,5 @@ public interface Drawable {
     Color color = Color.BLACK;
 
     void draw();
+    boolean within();
 }
