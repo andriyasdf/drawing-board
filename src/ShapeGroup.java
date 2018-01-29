@@ -1,7 +1,12 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ShapeGroup implements Drawable {
     private ArrayList<Shape> children = new ArrayList<>();
+
+    public ShapeGroup(Shape... child) {
+        children.addAll(Arrays.asList(child));
+    }
 
     @Override
     public void draw(DrawingBoard db) {
