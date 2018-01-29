@@ -1,6 +1,5 @@
 import java.awt.geom.Point2D;
-import java.awt.geom.Rectangle2D;
-import java.util.ArrayList;
+
 
 public class Drawing {
     private static int width = 800;
@@ -11,16 +10,15 @@ public class Drawing {
     public static void main(String[] args) {
         drawingBoard = new DrawingBoard(width, height);
 
-        ArrayList<Drawable> objects = new ArrayList<>();
+        Triangle triangle = new Triangle(new Point2D.Double(1, 2), new Point2D.Double( 400, 20), new Point2D.Double( 200, 300));
+        triangle.draw(drawingBoard);
 
-        objects.add(new Line(new Point2D.Double(20, 20), new Point2D.Double(400, 100)));
-        objects.add(new Triangle(new Point2D.Double(1, 2), new Point2D.Double( 400, 20), new Point2D.Double( 200, 300)));
-        objects.add(new Rectangle(20, 20, 400, 100));
+        Line line = new Line(new Point2D.Double(20, 20), new Point2D.Double(400, 100));
+        line.draw(drawingBoard);
 
-        // Draw all the objects
-        for (Drawable o : objects) {
-            o.draw(drawingBoard);
-        }
+        Rectangle rectangle = new Rectangle(20, 20, 400, 100);
+        rectangle.draw(drawingBoard);
+
 
         drawingBoard.show();
     }
