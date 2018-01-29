@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.awt.geom.Point2D;
 
 
@@ -11,17 +10,16 @@ public class Drawing {
     public static void main(String[] args) {
         drawingBoard = new DrawingBoard(width, height);
 
-        Triangle triangle = new Triangle(new Point2D.Double(1, 2), new Point2D.Double( 400, 20), new Point2D.Double( 200, 300));
-        triangle.draw(drawingBoard);
-
         Line line = new Line(new Point2D.Double(20, 20), new Point2D.Double(400, 100));
         line.draw(drawingBoard);
 
         Rectangle rectangle = new Rectangle(20, 20, 400, 100);
         rectangle.draw(drawingBoard);
 
-        RightTraingle rightTraingle = new RightTraingle(new Point2D.Double(500, 400), new Point2D.Double(300, 500));
-        rightTraingle.draw(drawingBoard);
+        RightTriangle rightTriangle = new RightTriangle(new Point2D.Double(500, 400), new Point2D.Double(300, 500));
+        rightTriangle.draw(drawingBoard);
+
+
 
         drawingBoard.show();
     }
