@@ -8,8 +8,6 @@ public class Line extends Shape {
 
     @Override
     public void draw(DrawingBoard db) {
-        super.draw(db);
-
         // Find the slope of the line
         double dy = points.get(1).getY() - points.get(0).getY();
         double dx = points.get(1).getX() - points.get(0).getX();
