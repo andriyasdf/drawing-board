@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.awt.geom.Point2D;
 
 
@@ -19,6 +20,8 @@ public class Drawing {
         Rectangle rectangle = new Rectangle(20, 20, 400, 100);
         rectangle.draw(drawingBoard);
 
+        RightTraingle rightTraingle = new RightTraingle(new Point2D.Double(500, 400), new Point2D.Double(300, 500));
+        rightTraingle.draw(drawingBoard);
 
         drawingBoard.show();
     }
