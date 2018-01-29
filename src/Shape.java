@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public abstract class Shape implements Drawable {
     ArrayList<Point2D> points = new ArrayList<>();
+    int color = 0x00FFFFFF;
 
     public Shape(Point2D... point) {
         points.addAll(Arrays.asList(point));
@@ -13,7 +14,7 @@ public abstract class Shape implements Drawable {
     @Override
     public void draw(DrawingBoard db) {
         for (Point2D p : points) {
-            db.imgArray[(int)p.getX()][(int)p.getY()] = Color.WHITE.getRGB();
+            db.imgArray[(int)p.getX()][(int)p.getY()] = color;
         }
 
         for (int i = 0; i < points.size(); i++) {

@@ -7,8 +7,12 @@ public class Rectangle extends Shape {
                 new Point2D.Double(x + width, y + height), new Point2D.Double(x, y + height));
     }
 
-    public Rectangle(Point2D point1, Point2D point2) {
-        super(point1, (new Point2D.Double(point2.getX(), point1.getY())), point2, (new Point2D.Double(point1.getX(), point2.getY())));
-
+    @Override
+    public void draw(DrawingBoard db) {
+        for (int i = (int)points.get(0).getX(); i < (int)points.get(2).getX(); i++) {
+            for (int j = (int)points.get(0).getY(); j < (int)points.get(2).getY(); j++) {
+                db.imgArray[i][j] = color;
+            }
+        }
     }
 }
