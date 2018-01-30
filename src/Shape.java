@@ -14,7 +14,7 @@ public abstract class Shape implements Drawable {
     @Override
     public void draw(DrawingBoard db) {
         for (Point2D p : points) {
-            db.imgArray[(int)p.getX()][(int)p.getY()] = color;
+            db.imgArray[(int)p.getY()][(int)p.getX()] = color;
         }
 
         for (int i = 0; i < points.size(); i++) {
