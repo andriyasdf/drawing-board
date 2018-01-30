@@ -15,7 +15,7 @@ public class Rectangle extends Shape {
     public void draw(DrawingBoard db) {
         for (int i = (int)points.get(0).getX(); i < (int)points.get(2).getX(); i++) {
             for (int j = (int)points.get(0).getY(); j < (int)points.get(2).getY(); j++) {
-                db.imgArray[i][j] = color;
+                db.imgArray[j][i] = color;
             }
         }
     }
