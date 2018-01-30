@@ -13,9 +13,11 @@ public class Drawing {
 
         ArrayList<Drawable> objects = new ArrayList<>();
 
-        objects.add(new Line(new Point2D.Double(300, 200), new Point2D.Double(400, 300)));
-        objects.add(new RightTriangle(new Point2D.Double(1, 2), new Point2D.Double( 400, 20), new Point2D.Double( 200, 300)));
         objects.add(new Rectangle(20, 20, 400, 100));
+        objects.add(new Rectangle(100, 400, 40, 40));
+        objects.add(new Rectangle(300, 500, 100, 200));
+
+        objects.add(new ShapeGroup());
 
         // Draw all the objects
         for (Drawable o : objects) {
