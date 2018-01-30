@@ -26,7 +26,9 @@ public abstract class Shape implements Drawable {
     @Override
     public boolean within(DrawingBoard db) {
         for (Point2D p : points) {
-            if (db.contains((int)p.getX(), (int)p.getY())) return false;
+            if (db.getWidth()<(int)p.getX() || db.getHeight()<(int)p.getY()) {
+                return false;
+            }
         }
 
         return true;
