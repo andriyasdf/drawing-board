@@ -6,6 +6,11 @@ public class Line extends Shape {
         super(point1, point2);
     }
 
+    public Line(Point2D point1, Point2D point2, int color) {
+        super(point1, point2);
+        this.color = color;
+    }
+
     @Override
     public void draw(DrawingBoard db) {
         // Find the slope of the line
@@ -16,7 +21,7 @@ public class Line extends Shape {
         Point2D draw = new Point2D.Double(points.get(0).getX(), points.get(0).getY());
 
         while (draw.distance(points.get(1)) > 1) {
-            db.imgArray[(int)draw.getX()][(int)draw.getY()] = Color.WHITE.getRGB();
+            db.imgArray[(int)draw.getX()][(int)draw.getY()] = color;
 
             draw.setLocation(draw.getX() + Math.cos(angle), draw.getY() + Math.sin(angle));
         }
