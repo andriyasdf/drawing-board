@@ -1,25 +1,26 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Drawing {
-    private static int width = 800;
-    private static int height = 600;
+    private DrawingBoard drawingBoard;
+    private ArrayList<Drawable> objects = new ArrayList<>();
 
-    public static DrawingBoard drawingBoard;
-
-    public static void main(String[] args) {
+    public Drawing(int width, int height) {
         drawingBoard = new DrawingBoard(width, height);
+    }
 
-        ArrayList<Drawable> objects = new ArrayList<>();
+    public Drawing(String filePath) {
+        drawingBoard = new DrawingBoard(filePath);
+    }
 
-        objects.add(new Rectangle(20, 20, 400, 100));
-        objects.add(new Rectangle(100, 400, 40, 40));
-        objects.add(new Rectangle(300, 500, 100, 200));
+    public void add(Drawable... object) {
+        objects.addAll(Arrays.asList(object));
+    }
 
-        objects.add(new ShapeGroup());
-
+    public void show() {
         // Draw all the objects
         for (Drawable o : objects) {
-            o.draw(drawingBoard);
+            if (o.within(drawingBoard)) o.draw(drawingBoard);
         }
 
         drawingBoard.show();
