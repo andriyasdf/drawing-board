@@ -3,7 +3,7 @@ import java.awt.geom.Point2D;
 
 public class Line extends Shape {
     public Line(Point2D point1, Point2D point2) {
-        super(Color.white, point1, point2);
+        super(point1, point2);
     }
 
     @Override
