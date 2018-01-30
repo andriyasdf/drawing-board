@@ -10,7 +10,7 @@ public class Main {
         drawing.add(new Rectangle(100, 400, 40, 40, 0x00FFFF33));
         drawing.add(new Rectangle(500, 300, 100, 200, 0x0068FEB0));
         drawing.add(new Rectangle(300, 300, 1000, 100, 0x00FFFEBF));
-        drawing.add(new ShapeGroup(new Rectangle(700, 200, 100, 200), new RightTriangle(100, 200, 100, -100));
+        drawing.add(new ShapeGroup(new Rectangle(700, 200, 100, 200), new RightTriangle(100, 200, 100, -100)));
 
         drawing.add(new RightTriangle(300, 300, 100, 150, 0xFF2373b4));
         drawing.add(new RightTriangle(500, 200, 100, -80));
