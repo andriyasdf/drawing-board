@@ -1,11 +1,19 @@
+import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ShapeGroup implements Drawable {
+    private Point2D pos = new Point2D.Double();
     private ArrayList<Shape> children = new ArrayList<>();
 
     public ShapeGroup(Shape... child) {
         children.addAll(Arrays.asList(child));
+
+    }
+
+    public ShapeGroup(Point2D pos, Shape... child) {
+        this(child);
+        this.pos = pos;
     }
 
     @Override
