@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,14 +11,14 @@ public abstract class Shape implements Drawable {
     }
 
     @Override
-    public void draw(DrawingBoard db) {
+    public void drawOn(DrawingBoard db) {
         for (Point2D p : points) {
             db.imgArray[(int)p.getY()][(int)p.getX()] = color;
         }
 
         for (int i = 0; i < points.size(); i++) {
             Line line = new Line(points.get(i), points.get((i+1) % points.size()));
-            line.draw(db);
+            line.drawOn(db);
         }
     }
 

@@ -1,4 +1,4 @@
 public interface Drawable {
-    void draw(DrawingBoard db);
+    void drawOn(DrawingBoard db);
     boolean within(DrawingBoard db);
 }

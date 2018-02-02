@@ -20,7 +20,7 @@ public class Drawing {
     public void show() {
         // Draw all the objects
         for (Drawable o : objects) {
-            if (o.within(drawingBoard)) o.draw(drawingBoard);
+            o.drawOn(drawingBoard);
         }
 
         drawingBoard.show();

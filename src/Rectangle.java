@@ -12,10 +12,12 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void draw(DrawingBoard db) {
-        for (int i = (int)points.get(0).getX(); i < (int)points.get(2).getX(); i++) {
-            for (int j = (int)points.get(0).getY(); j < (int)points.get(2).getY(); j++) {
-                db.imgArray[j][i] = color;
+    public void drawOn(DrawingBoard db) {
+        for (int y = (int)points.get(0).getX(); y < (int)points.get(2).getX(); y++) {
+            for (int x = (int)points.get(0).getY(); x < (int)points.get(2).getY(); x++) {
+                if (!within(db)) continue;
+
+                db.imgArray[x][y] = color;
             }
         }
     }

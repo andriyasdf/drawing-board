@@ -18,7 +18,7 @@ public class RightTriangle extends Shape {
     }
 
     @Override
-    public void draw(DrawingBoard db) {
+    public void drawOn(DrawingBoard db) {
         if (width > 0) {
             double slope = (points.get(1).getX() - points.get(0).getX())/Math.abs(height);
             double draw = points.get(1).getX();

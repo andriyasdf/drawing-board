@@ -4,22 +4,22 @@ import java.util.Arrays;
 
 public class ShapeGroup implements Drawable {
     private Point2D pos = new Point2D.Double();
-    private ArrayList<Shape> children = new ArrayList<>();
+    private ArrayList<Drawable> children = new ArrayList<>();
 
-    public ShapeGroup(Shape... child) {
+    public ShapeGroup(Drawable... child) {
         children.addAll(Arrays.asList(child));
 
     }
 
-    public ShapeGroup(Point2D pos, Shape... child) {
+    public ShapeGroup(Point2D pos, Drawable... child) {
         this(child);
         this.pos = pos;
     }
 
     @Override
-    public void draw(DrawingBoard db) {
+    public void drawOn(DrawingBoard db) {
         for (Drawable o : children) {
-            o.draw(db);
+            o.drawOn(db);
         }
     }
 
